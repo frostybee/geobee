@@ -3,13 +3,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 use Frostybee\Geobee\Calculator;
 
-// H3S,QC,45.5155,-73.6292
-// H3T,QC,45.5115,-73.616
-// H3V,QC,45.4965,-73.6177
-$from_latitude = 45.5155;
-$from_longitude = -73.6292;
-$to_latitude = 45.4965;
-$to_longitude = -73.6177;
+
+/*
+ * Calculate distance from downtown Montreal to Laval
+ * From: Ville-Marie (postal code area: H3A)
+ *       Latitude/Longitude: 45.4987, -73.5703
+ * To: Laval (postal code area: H7T) 
+ *     Latitude/Longitude: 45.55690, -73.7480
+ */
+$from_latitude = 45.4987;
+$from_longitude = -73.5703;
+$to_latitude = 45.55690;
+$to_longitude = -73.7480;
 
 $calculator = new Calculator();
 $distance = $calculator->calculate(

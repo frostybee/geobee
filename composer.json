@@ -1,8 +1,12 @@
 {
     "name": "frostybee/geobee",
-    "description": "A standalone PHP library for calculating the distance between geographical coordinates.",
+    "description": "A simple, stand-alone PHP library for calculating the distance between geographical coordinates.",
+    "version": "1.0.0",
+    "keywords": ["Vincenty formulae", "haversine", "geodesic distance"],
+    "homepage": "https://github.com/frostybee/geobee",
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Frostybee\\Geobee\\": "src/"
@@ -11,6 +15,7 @@
     "authors": [{
         "name": "Sleiman Rabah"
     }],
-    "minimum-stability": "RC",
-    "require": {}
+    "require": {
+        "php": ">=8"
+    }
 }
