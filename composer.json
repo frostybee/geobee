@@ -1,0 +1,16 @@
+{
+    "name": "frostybee/geobee",
+    "description": "A standalone PHP library for calculating the distance between geographical coordinates.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Frostybee\\Geobee\\": "src/"
+        }
+    },
+    "authors": [{
+        "name": "Sleiman Rabah"
+    }],
+    "minimum-stability": "RC",
+    "require": {}
+}
