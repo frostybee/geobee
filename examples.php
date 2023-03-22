@@ -44,8 +44,7 @@ echo $calculator->to('mi', 3, false); // False to round UP, true, round down.
 echo '<br>';
 echo 'Rounded: ';
 echo $calculator->to('km', 2, false); // False to round UP, true, round down.
-echo '<br>';
-echo round(26.91310884, 6,  PHP_ROUND_HALF_UP);
+
 echo '<br>';
 // Convert to all supported length units.
 $results = $calculator->toAll(2, true);

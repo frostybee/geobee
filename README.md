@@ -52,7 +52,7 @@ $distance = $calculator->calculate(
 
 #### Single Conversion
 
-Use the `to()` method as show below. However, you must call the `calculate()` method once prior to doing any conversions.
+Use the `to()` method as show below. However, you must call the `calculate()` method once before doing any conversions.
 
 ``` php
 $distance = $calculator->calculate(
