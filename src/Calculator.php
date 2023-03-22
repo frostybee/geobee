@@ -60,13 +60,13 @@ namespace Frostybee\Geobee {
          * The latitudes and longitudes parameters must be specified in decimal degrees.
          * The valid range: 
          *                 - Latitude -90 and +90
-         *                 - Latitude -180 and +180     
+         *                 - Longitude -180 and +180     
          * 
          * @param float $from_latitude Latitude of the start point in decimal degrees.
          * @param float $from_longitude Longitude of the starting point in decimal degrees.
          * @param float $to_latitude Latitude of the target point in decimal degrees.
          * @param float $to_longitude Longitude of the target point in decimal degrees.   
-         * @return Calculator|int
+         * @return Calculator
          */
         public function calculate(
             float $from_latitude,
@@ -115,7 +115,7 @@ namespace Frostybee\Geobee {
                 return 0;
             }
             if (!$this->unitExists($unit)) {
-                throw new Exception("The requested conversion to unit u=$unit wasn't possible:  the supplied either invalid or unsupported.");
+                throw new Exception("The requested conversion to unit u=$unit wasn't possible:  the supplied unit either invalid or unsupported.");
             }
             $conversion = $this->getConversion($unit);
             if (is_numeric($conversion)) {
