@@ -13,7 +13,7 @@ To install it:
 
 ## Units of Lengths
 
-The following are the supported units of lengths along with their respective  conversion factors.
+The following are the supported units of lengths along with their respective  conversion factors:
 * `m` - Meters (default)
 * `km` - kilometers (1km = 1000 meters)
 * `mi` - Miles (1mi = 1609.344 meters)
@@ -48,9 +48,11 @@ $distance = $calculator->calculate(
 )->getDistance(); // Distance in meters.
 ```
 
-### Converting the Distance from Meters to Another Unit
+### Converting the Distance from Meters to other Units
 
-Use the `to()` method as show below:
+#### Single Conversion
+
+Use the `to()` method as show below. However, you must call the `calculate()` method once prior to doing any conversions.
 
 ``` php
 $distance = $calculator->calculate(
@@ -67,7 +69,27 @@ Or:
 $distance = $calculator->to('mi', 3, false);
 ```
 
-Convert to all supported length units.
+#### Multiple Conversions
+
+1. Use the `toMany()` method to convert the distance from meters to many (one or more) units of lengths:
+
+```php
+// $calculator->toMany(array, $decimals, $round);
+$results = $calculator->toMany(['km', 'mi'], 3, true);
+```
+
+The above call returns an associative structured as follows:
+
+```php
+array(2) {
+  ["km"]=>
+  float(15.298)
+  ["mi"]=>
+  float(9.506)
+}
+```
+
+2. Convert to all supported length units.
 
 ```php
 //$calculator->toAll($decimals, $round);
@@ -90,23 +112,5 @@ array(6) {
   float(9.51)
   ["nm"]=>
   float(8.26)
-}
-```
-
-Convert to multiple (one or more) units of lengths.
-
-```php
-// $calculator->toMany(array, $decimals, $round);
-$results = $calculator->toMany(['km', 'mi'], 3, true);
-```
-
-output:
-
-```php
-array(2) {
-  ["km"]=>
-  float(15.298)
-  ["mi"]=>
-  float(9.506)
 }
 ```
