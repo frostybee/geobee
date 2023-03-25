@@ -115,9 +115,10 @@ namespace Frostybee\Geobee {
                 return 0;
             }
             if (!$this->unitExists($unit)) {
-                throw new Exception("The requested conversion to unit u=$unit wasn't possible:  the supplied unit either invalid or unsupported.");
+                throw new Exception("The requested conversion to unit u=$unit wasn't possible:  the supplied unit is either invalid or unsupported.");
             }
-            $conversion = $this->getConversion($unit);
+                        
+            $conversion = $this->getConversion(strtolower($unit));
             if (is_numeric($conversion)) {
                 $result =  $this->distance / $conversion;
                 if ($this->isPrecisionValid($decimals)) {

@@ -78,7 +78,7 @@ $distance = $calculator->to('mi', 3, false);
 $results = $calculator->toMany(['km', 'mi'], 3, true);
 ```
 
-The above call returns an associative structured as follows:
+The above call returns an associative array structured as follows:
 
 ```php
 array(2) {
