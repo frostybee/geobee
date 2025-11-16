@@ -81,5 +81,5 @@ echo '---------- <br>';
 echo 'Distance converted to all units of lengths<br>';
 var_dump($results);
 // Test validation method.
-$is_valid = $calculator->is_coordinate($from_latitude, $from_longitude);
+$is_valid = $calculator->isCoordinate($from_latitude, $from_longitude);
 var_dump($is_valid);
