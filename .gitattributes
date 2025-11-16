@@ -1,0 +1,6 @@
+# Exclude files from Packagist/Composer archive
+/tests              export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/phpunit.xml        export-ignore
+/.phpunit.cache     export-ignore
